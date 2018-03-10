@@ -21,7 +21,7 @@ defmodule Day1 do
     digits = Integer.digits puzzle_input
     digits = digits ++ [hd(digits)]
     digits
-      |> Kernel.--(Enum.dedup(digits))
-      |> Enum.sum()
+    |> Kernel.--(Enum.dedup(digits))
+    |> Enum.sum()
   end
 end
