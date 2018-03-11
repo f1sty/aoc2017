@@ -42,10 +42,10 @@ defmodule Day1 do
       :part_two -> div(len, 2)
       _ -> 1
     end
-    check_list = digits
-                 |> Stream.cycle
-                 |> Enum.take(len + step)
-    _sum(check_list, [], step)
+    digits
+    |> Stream.cycle
+    |> Enum.take(len + step)
+    |> _sum([], step)
   end
 
   defp _sum([], acc, _step) do
