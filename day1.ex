@@ -14,7 +14,7 @@ defmodule Day1 do
   10 items, only include a digit in your sum if the digit 10/2 = 5 steps
   forward matches it. Fortunately, your list has an even number of elements.
 
-  ## Example
+  ## Examples
 
     iex> Day1.get_answer(1122, :part_one)
     3
