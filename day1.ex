@@ -22,6 +22,6 @@ defmodule Day1 do
     digits = digits ++ [hd(digits)]
     digits
     |> Kernel.--(Enum.dedup(digits))
-    |> Enum.sum()
+    |> Enum.sum
   end
 end
