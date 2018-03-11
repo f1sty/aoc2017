@@ -10,8 +10,8 @@ defmodule Day2 do
 
   ## Example
 
-  iex> Day2.get_answer("inputs/day2_test")
-  18
+    iex> Day2.get_answer("inputs/day2_test")
+    18
   """
 
   def get_answer(puzzle_input_filename) do
