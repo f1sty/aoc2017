@@ -34,7 +34,7 @@ defmodule Day1 do
     4
   """
 
-  def get_answer(puzzle_input, part) do
+  def get_answer(puzzle_input, part \\ :part_one) do
     digits = Integer.digits(puzzle_input)
     len = length(digits)
     step = case part do

@@ -23,8 +23,8 @@ defmodule Day2 do
     9
   """
 
-  def get_answer(puzzle_input_filename, part) do
-    func = case part do
+  def get_answer(puzzle_input_filename, part \\ :part_one) do
+    part_func = case part do
       :part_one -> &_part_one_func/1
       :part_two -> &_part_two_func/1
       _ -> &_part_one_func/1
@@ -32,15 +32,13 @@ defmodule Day2 do
 
     puzzle_input_filename
     |> parse_file
-    |> func.()
+    |> part_func.()
     |> Enum.sum
   end
 
   defp parse_file(puzzle_input_filename) do
     puzzle_input_filename
-    |> File.stream!([:read], :line)
-    |> Stream.map(&String.trim/1)
-    |> Stream.map(&String.split/1)
+    |> Helpers.read_and_split
     |> Stream.map(fn line -> Enum.map(line, &String.to_integer/1) end)
   end
 
